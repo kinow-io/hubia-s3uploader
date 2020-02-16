@@ -48,9 +48,6 @@ $result = $client->assumeRole([
     'DurationSeconds' => 3600,
 ])->get('Credentials');
 
-$result['Key'] = $key;
-echo json_encode($result);
-
 die(json_encode([
     'region' => $region,
     'bucket' => $bucket,
